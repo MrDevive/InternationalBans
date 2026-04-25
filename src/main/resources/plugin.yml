@@ -1,0 +1,85 @@
+name: InternationalBans
+version: 1.1.0
+main: com.example.internationalbans.InternationalBans
+api-version: '1.21'
+author: Devive
+description: Плагин для управления наказаниями игроков с поддержкой MySQL
+
+commands:
+  ban:
+    description: Забанить игрока навсегда
+    usage: /<command> <игрок> [время] <причина>
+    aliases: [permban]
+  tempban:
+    description: Забанить игрока на время
+    usage: /<command> <игрок> <время> <причина>
+    aliases: [tban]
+  unban:
+    description: Снять бан с игрока
+    usage: /<command> <игрок>
+    aliases: [pardon]
+  ipban:
+    description: Забанить игрока по IP навсегда
+    usage: /<command> <игрок> <причина>
+  tempipban:
+    description: Забанить игрока по IP на время
+    usage: /<command> <игрок> <время> <причина>
+    aliases: [tipban]
+  unbanip:
+    description: Снять IP-бан с игрока
+    usage: /<command> <игрок>
+    aliases: [pardonip]
+  mute:
+    description: Замутить игрока навсегда
+    usage: /<command> <игрок> <причина>
+  tempmute:
+    description: Замутить игрока на время
+    usage: /<command> <игрок> <время> <причина>
+    aliases: [tmute]
+  unmute:
+    description: Снять мут с игрока
+    usage: /<command> <игрок>
+  kick:
+    description: Выгнать игрока с сервера
+    usage: /<command> <игрок> <причина>
+  warn:
+    description: Выдать предупреждение игроку
+    usage: /<command> <игрок> <причина>
+  history:
+    description: Показать историю наказаний игрока
+    usage: /<command> <игрок>
+    aliases: [punishments, bans]
+  reload:
+    description: Перезагрузить плагин
+    usage: /<command>
+    aliases: [ibrl]
+  ib:
+    description: Главная команда плагина
+    usage: /<command> <help|info|stats>
+    aliases: [intbans]
+
+permissions:
+  internationalbans.admin:
+    description: Все права плагина
+    default: op
+    children:
+      internationalbans.ban: true
+      internationalbans.tempban: true
+      internationalbans.unban: true
+      internationalbans.ipban: true
+      internationalbans.tempipban: true
+      internationalbans.unbanip: true
+      internationalbans.mute: true
+      internationalbans.tempmute: true
+      internationalbans.unmute: true
+      internationalbans.kick: true
+      internationalbans.warn: true
+      internationalbans.history: true
+      internationalbans.reload: true
+      internationalbans.notify: true
+  internationalbans.bypass:
+    description: Обход наказаний
+    default: op
+  internationalbans.reload.bypass:
+    description: Обход кулдауна перезагрузки
+    default: op

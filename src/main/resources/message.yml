@@ -1,0 +1,111 @@
+# InternationalBans - Файл сообщений
+
+prefix: "&8[&cInternationalBans&8] &r"
+
+commands:
+  ban:
+    usage: "&cИспользование: /ban <игрок> [время] <причина>"
+  tempban:
+    usage: "&cИспользование: /tempban <игрок> <время> <причина>"
+    success: "&aИгрок {player} забанен на {duration}"
+  unban:
+    usage: "&cИспользование: /unban <игрок>"
+    success: "&aИгрок {player} разбанен!"
+  ipban:
+    usage: "&cИспользование: /ipban <игрок> <причина>"
+  tempipban:
+    usage: "&cИспользование: /tempipban <игрок> <время> <причина>"
+  unbanip:
+    usage: "&cИспользование: /unbanip <игрок>"
+    success: "&aIP-бан снят с игрока {player}!"
+  mute:
+    usage: "&cИспользование: /mute <игрок> <причина>"
+  tempmute:
+    usage: "&cИспользование: /tempmute <игрок> <время> <причина>"
+    success: "&aИгрок {player} замучен на {duration}"
+  unmute:
+    usage: "&cИспользование: /unmute <игрок>"
+    success: "&aМут снят с игрока {player}!"
+  kick:
+    usage: "&cИспользование: /kick <игрок> <причина>"
+  warn:
+    usage: "&cИспользование: /warn <игрок> <причина>"
+    success: "&aВы выдали предупреждение игроку {player}"
+  history:
+    usage: "&cИспользование: /history <игрок>"
+    header: "&6=== История наказаний {player} ==="
+    format: "&7- &e{type} &7от &b{staff} &7- &f{reason} &7({date}) {status}"
+    active: "&c[Активно]"
+    expired: "&7[Истекло]"
+    empty: "&eУ игрока {player} нет наказаний"
+    footer: "&6================================="
+  reload:
+    success: "&aПлагин успешно перезагружен за {time}ms!"
+    fail: "&cОшибка при перезагрузке плагина!"
+    cooldown: "&cПодождите {seconds} секунд перед следующей перезагрузкой!"
+    confirm: "&eДля подтверждения введите &f/reload confirm"
+  ib:
+    unknown: "&cНеизвестная подкоманда!"
+    help-header: "&6=== InternationalBans Help ==="
+    help-reload: "&e/reload &7- Перезагрузить плагин"
+    help-ban: "&e/ban &7- Забанить игрока"
+    help-tempban: "&e/tempban &7- Временный бан"
+    help-unban: "&e/unban &7- Снять бан"
+    help-ipban: "&e/ipban &7- IP-бан"
+    help-tempipban: "&e/tempipban &7- Временный IP-бан"
+    help-unbanip: "&e/unbanip &7- Снять IP-бан"
+    help-mute: "&e/mute &7- Замутить игрока"
+    help-tempmute: "&e/tempmute &7- Временный мут"
+    help-unmute: "&e/unmute &7- Снять мут"
+    help-kick: "&e/kick &7- Выгнать игрока"
+    help-warn: "&e/warn &7- Выдать предупреждение"
+    help-history: "&e/history &7- История наказаний"
+    help-footer: "&6================================"
+    info: "&6=== InternationalBans ===\n&7Версия: &f{version}\n&7Автор: &f{author}"
+    stats: "&6=== Статистика ===\n&7Банов: &f{bans}\n&7IP-банов: &f{ipbans}\n&7Мутов: &f{mutes}\n&7Предупреждений: &f{warns}\n&7Всего наказаний: &f{total}\n&7Активных: &f{active}\n&7Уникальных игроков: &f{players}"
+
+broadcast:
+  ban: "&c{player} &7был забанен &c{staff}&7. Причина: &f{reason}"
+  tempban: "&c{player} &7был забанен &c{staff}&7 на &e{duration}&7. Причина: &f{reason}"
+  unban: "&a{player} &7был разбанен &c{staff}"
+  ipban: "&c{player} &7был забанен по IP &c{staff}&7. Причина: &f{reason}"
+  tempipban: "&c{player} &7был забанен по IP &c{staff}&7 на &e{duration}&7. Причина: &f{reason}"
+  unbanip: "&aIP-бан снят с {player} &7администратором &c{staff}"
+  mute: "&e{player} &7был замучен &c{staff}&7. Причина: &f{reason}"
+  tempmute: "&e{player} &7был замучен &c{staff}&7 на &e{duration}&7. Причина: &f{reason}"
+  unmute: "&aМут снят с {player} &7администратором &c{staff}"
+  kick: "&e{player} &7был выгнан &c{staff}&7. Причина: &f{reason}"
+  warn: "&e{player} &7получил предупреждение от &c{staff}&7. Причина: &f{reason}"
+
+kick:
+  ban: "&cВы были забанены!\n&7Причина: &f{reason}\n&7Администратор: &c{staff}"
+  tempban: "&cВы были забанены!\n&7Причина: &f{reason}\n&7Администратор: &c{staff}\n&7Срок: &e{duration}"
+  ipban: "&cВаш IP-адрес заблокирован!\n&7Причина: &f{reason}\n&7Администратор: &c{staff}"
+  tempipban: "&cВаш IP-адрес заблокирован!\n&7Причина: &f{reason}\n&7Администратор: &c{staff}\n&7Срок: &e{duration}"
+  kick: "&cВас выгнали с сервера!\n&7Причина: &f{reason}"
+
+chat:
+  muted: "&cВы не можете писать в чат!\n&7Причина: &f{reason}\n&7Осталось: &e{time}"
+  muted-permanent: "&cВы не можете писать в чат!\n&7Причина: &f{reason}\n&7Срок: &cнавсегда"
+
+mute:
+  notify: "&cВы были замучены!\n&7Причина: &f{reason}"
+tempmute:
+  notify: "&cВы были замучены!\n&7Причина: &f{reason}\n&7Срок: &e{duration}"
+warn:
+  notify: "&e⚠ Вы получили предупреждение!\n&7Причина: &f{reason}\n&7Всего: &c{warnings}"
+join:
+  muted: "&e⚠ Вы замучены!\n&7Причина: &f{reason}\n&7Осталось: &e{time}"
+  muted-permanent: "&e⚠ Вы замучены навсегда!\n&7Причина: &f{reason}"
+  warnings: "&e⚠ У вас {count} предупреждений!"
+
+errors:
+  player-not-found: "&cИгрок не найден!"
+  cannot-ban: "&cВы не можете наказать этого игрока!"
+  cannot-mute: "&cВы не можете замутить этого игрока!"
+  invalid-time: "&cНеверный формат времени!\n&7Используйте: 10s, 5m, 2h, 7d, 2w, 1M"
+  no-permission: "&cУ вас нет прав!"
+  already-banned: "&cИгрок уже забанен!"
+  already-muted: "&cИгрок уже замучен!"
+  not-banned: "&cИгрок не забанен!"
+  not-muted: "&cИгрок не замучен!"
