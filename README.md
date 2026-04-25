@@ -117,6 +117,31 @@ command-settings:
   reload-cooldown: 5
 ```
 
+Файл `database.yml`:
+
+```yaml
+mysql:
+  enabled: true
+
+  host: "127.0.0.1"
+  port: 3306
+  database: "database_name"
+  username: "root"
+  password: "password"
+
+  use-ssl: false
+  allow-public-key-retrieval: true
+  
+  pool:
+    max-pool-size: 10
+    min-idle: 2
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+
+  table-prefix: "international_bans"
+```
+
 ## 🛠️ Команды и права
 
 | Команда | Описание | Право (`permission`) |
